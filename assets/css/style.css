@@ -1,0 +1,145 @@
+:root {
+  --space-grey: #33393f;
+  --light-blue: blue;
+  --gin: #e0eae4;
+  /*--light-purple: #e866ec;*/
+  --light-purple: orange;
+  --white: white;
+  --buttercup: rgba(243, 156, 18);
+  --sandstorm: rgba(249, 191, 59);
+}
+
+/* set content highlight color and background */
+::selection {
+  background-color: var(--white);
+  color: var(--light-blue);
+}
+
+* {
+    /*box-sizing: border-box;*/
+    /*margin: 20px;*/
+    /*border: 10px;*/
+  }
+  /* set default font to 10px */
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    background-color: var(--space-grey);
+    line-height: 1.5;
+  }
+
+  h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: var(--light-purple);
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .page-title{
+    text-align: center;
+  }
+
+  .page-title p {
+    color: var(--white);
+    margin:5px 150px;
+    font-size: 1.4rem;
+  }
+
+  main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 0 33.3%;
+    border-width: 1px;
+    padding: 10px;
+    margin: 20px;
+    width: 33.33%;
+    border-style: dashed;
+    border-color: white;    
+  }
+
+  .card-header {
+    position: relative;
+    margin-top: -20px;
+    background-color: var(--space-grey);
+    border-style: solid;
+    text-align: center;
+    border-radius: 12px;
+    border-color: var(--white);
+    color: var(--light-purple);
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  .card-desc {
+    color: var(--light-purple);
+    font-size: 1.4rem;
+    margin: 10px;
+  }
+
+  section:hover, section:hover .card-header {
+    box-shadow: inset 0px 0px 8px var(--light-purple), 0 0 15px var(--light-purple);
+  }
+
+  pre {
+    font-family: Consolas, 'MonoLisa', 'Apercu Mono', 'Lucida Console','Courier', monospace;
+    background-image: linear-gradient(45deg, var(--buttercup) ,
+    var(--sandstorm));
+    color: white;
+    margin-left: 0px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+  }
+
+  pre:active{
+    user-select:all;
+  }
+
+  .footer {
+    font-size: 2rem;
+    text-align:center;
+    color: var(--light-purple);
+  }
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex: 0 0 50%;
+   /* max-width: 50%;*/
+  }
+  header {
+    background: purple;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .card {
+    flex: 0 0 100%;
+   /* max-width: 50%;*/
+  }
+  header {
+    background: purple;
+  }
+}
+
+.card {
+ /* min-width: 33.33%;*/
+}
